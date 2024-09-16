@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
+:root {
+    --brand-black: #0E0E0E;
+    --brand-white: #EEEEEE;
+    --brand-gray: #E0E0E0;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -7,10 +13,60 @@
     font-family: 'Outfit', sans-serif;
 }
 
+body {
+    margin: 0 24px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+
+button {
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+}
+
+.primary {
+    background-color: var(--brand-black);
+    color: var(--brand-white);
+}
+
 .logo {
     font-size: 28px;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.menu {
+    display: flex;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: var(--brand-black);
+    border-radius: 8px;
 }
 
 ul {
@@ -26,4 +82,32 @@ li a {
     display: inline-block;
     text-align: center;
     text-decoration: none;
+}
+
+.thumbnail {
+    width: 100%;
+    border-radius: 32px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    margin: 24px;
+}
+
+.cta, .credit {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+}
+
+.quote {
+    font-size: 16px;
+    font-weight: 300;
 }
