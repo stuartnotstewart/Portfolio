@@ -17,19 +17,26 @@ body {
     margin: 0 24px;
 }
 
+main {
+    padding-top: 172px;
+}
+
 h1 {
     font-weight: 600;
     font-size: 44px;
+    margin-bottom: 64px;
 }
 
 h2 {
     font-size: 24px;
     font-weight: 600;
+    margin-bottom: 4px;
 }
 
 h3 {
     font-size: 20px;
     font-weight: 500;
+    padding-bottom: 16px;
 }
 
 p {
@@ -37,7 +44,6 @@ p {
     line-height: 24px;
     font-weight: 300;
 }
-
 
 button {
     padding: 16px 24px;
@@ -58,8 +64,31 @@ button {
     font-weight: 600;
 }
 
+header {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+}
+
+nav {
+    display: flex;
+    padding: 16px 24px;
+    margin: 44px 0 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.glass-bg {
+    border-radius: 20px;
+    border: 2px solid #FFF;
+    background: linear-gradient(273deg, rgba(255, 255, 255, 0.40) -2.8%, rgba(242, 242, 242, 0.50) 101.33%);
+    backdrop-filter: blur(20px);
+}
+
 .menu {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .bar {
@@ -69,9 +98,14 @@ button {
     border-radius: 8px;
 }
 
+.top-bar, .bottom-bar {
+    position: relative;
+}
+
 ul {
     list-style: none;
     overflow: hidden;
+    display: none;
 }
 
 li {
@@ -84,17 +118,29 @@ li a {
     text-decoration: none;
 }
 
+.project-showcase {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    margin-bottom: 48px;
+}
+
 .thumbnail {
     width: 100%;
     border-radius: 32px;
+    margin-bottom: 16px;
 }
 
 footer {
     display: flex;
     flex-direction: column;
+    gap: 36px;
     align-items: center;
     padding: 32px;
-    margin: 24px;
+    margin: 24px 0 0;
+    width: 100%;
 }
 
 .cta, .credit {
@@ -105,9 +151,80 @@ footer {
 
 .socials {
     display: flex;
+    flex-direction: row;
+    gap: 32px;
 }
 
 .quote {
     font-size: 16px;
     font-weight: 300;
+    padding-bottom: 12px;
+}
+
+.cs-body {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.cs-thumbnail {
+    width: 100%;
+    border-radius: 32px;
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1024px) {
+     body {
+        padding: 0 160px;
+    }
+
+    header {
+        left: 160px;
+        right: 160px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    ul {
+        display: inline-block;
+    }
+
+    li {
+        margin-left: 24px;
+    }
+
+    .project-showcase {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 32%;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cs-body {
+        align-items: center;
+    }
+
+    .cs-splash, .cs-section {
+        width: 70%;
+    }
+
+    .cs-thumbnail {
+        height: 580px;
+        
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
 }
