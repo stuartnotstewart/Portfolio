@@ -172,6 +172,19 @@ footer {
     border-radius: 32px;
 }
 
+.book-gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: start;
+    align-items: start;
+}
+
+.book {
+    width: 49%;
+}
+
 /* Desktop */
 
 @media screen and (min-width: 1024px) {
