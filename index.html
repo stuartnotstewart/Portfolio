@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOTSTU - Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
     <div class="landing">
         <header>
             <nav class="glass-bg">
-                <div class="logo">.stu</div>
-    
-                <a class="menu">
-                    <div class="bar top-bar"></div>
-                    <div class="bar bottom-bar"></div>
-                </a>
-    
-                <ul>
-                    <li><a href="">Work</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="">Contact</a></li>
+                <ul class="nav-bar">
+                    <li class="logo">
+                        <a href="">.stu</a>
+                    </li>
+                    <input type="checkbox" id="check">
+                    <span class="menu">
+                        <li>
+                            <a href="">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="">About</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
                 </ul>
             </nav>
         </header>

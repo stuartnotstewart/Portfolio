@@ -51,6 +51,7 @@ button {
     font-size: 20px;
     font-weight: 600;
     border: none;
+    width: 100%;
 }
 
 .primary {
@@ -70,12 +71,69 @@ header {
     right: 16px;
 }
 
-nav {
+.nav-bar {
+    width: 100%;
     display: flex;
-    padding: 16px 24px;
-    margin: 44px 0 0;
     justify-content: space-between;
     align-items: center;
+    list-style: none;
+    position: relative;
+    padding: 12px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    transform: 0.15s ease-in-out;
+    position: relative;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--brand-black);
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: var(--brand-black);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
 }
 
 .glass-bg {
@@ -83,39 +141,6 @@ nav {
     border: 2px solid #FFF;
     background: linear-gradient(273deg, rgba(255, 255, 255, 0.40) -2.8%, rgba(242, 242, 242, 0.50) 101.33%);
     backdrop-filter: blur(20px);
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.bar {
-    width: 30px;
-    height: 3px;
-    background-color: var(--brand-black);
-    border-radius: 8px;
-}
-
-.top-bar, .bottom-bar {
-    position: relative;
-}
-
-ul {
-    list-style: none;
-    overflow: hidden;
-    display: none;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
 }
 
 .project-showcase {
@@ -172,6 +197,20 @@ footer {
     border-radius: 32px;
 }
 
+.section {
+    padding-bottom: 48px;
+}
+
+.first-child-section {
+    padding-bottom: 16px;
+}
+
+.cs-asset {
+    width: 100%;
+    border-radius: 8px;
+    padding-top: 16px;
+}
+
 .book-gallery {
     width: 100%;
     display: flex;
@@ -179,6 +218,11 @@ footer {
     gap: 8px;
     justify-content: start;
     align-items: start;
+}
+
+.cs-splash {
+    width: 100%;
+    border-radius: 32px;
 }
 
 .book {
@@ -239,5 +283,16 @@ footer {
 
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        transition: all 0.2s;
+    }
 }
